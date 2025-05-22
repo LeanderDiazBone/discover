@@ -2,8 +2,6 @@ import argparse
 import sys, os
 import copy
 import training
-import training_td3
-import training_sac
 #parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #sys.path.append(parent_dir)
 from launcher_utils import generate_base_command, generate_run_commands
@@ -45,7 +43,7 @@ applicable_configs = {
     "env_name": ["high_dimensional_maze"],      #arm_push_obstacle_2"arm_push_hard", "ant_plain_maze","ant_square_sparse_maze", "ant_square_sparse_maze", "ant_square_sparse_maze", "high_dimensional_maze", ant_square_sparse_maze,  "ant_long_hor_maze"ant_plain_maze "ant_square_sparse_maze", "ant_plain_maze", "ant_plain_maze", , "arm_push_hard", high_dimensional_maze
     "env_file_name": ["rand_4d_5h"],    #"rand_3d_7h", "rand_5d_4h"rand_2d_10h", "rand_3d_8h", "rand_4d_6h, 2d_15h", "rand_3d_8h, "2d_15h", rand_4d_5h, "rand_2d_10h", "rand_3d_8h", "rand_4d_5h", rand_2d_10h", "rand_4d_5h
     "exp_name_add": [""],
-    "algo": ["TD3", "SAC", "MaxInfoSAC"], # ,  "ThompTD3", SAC, , , "TD3", "SAC", , ThompTD3", "SAC", "MaxInfoSAC
+    "algo": ["TD3"], #, "SAC", "MaxInfoSAC" ,  "ThompTD3", SAC, , , "TD3", "SAC", , ThompTD3", "SAC", "MaxInfoSAC
     "relabel_prob_future": [0.0],
     "goal_selection_strategy": ["HER"], #,"ORACLE", , "MEGA", , "UCB"
     "adaptation_strategy": ["simple"],#simple 
@@ -56,7 +54,7 @@ applicable_configs = {
     "ucb_std_ini":  [1.0],
     "ucb_std_tar":  [0.0],
     "mega_cutoff_step_size": [1],
-    "seed": [0,1,2,3,4,5,6,7,8,9],  #,6,7,8,9
+    "seed": [0],  #,1,2,3,4,5,6,7,8,9
     #"critic_prior_file_name": ["mega_square_maze"], # mega_plain_maze,mega_square_maze
     "cur_alpha": [0.0],#0.0,, 1.0, , 0.25,, 5, 10
     "obs_size_prior": [6],
@@ -252,7 +250,7 @@ def main(args):
         cmd = make_experiment_name(cmd, mode)
         flag_list_2.append(cmd)
     for flags in flag_list_2:
-        cmd = generate_base_command(training_td3, flags=flags)
+        cmd = generate_base_command(training, flags=flags)
         command_list.append(cmd)
     print(command_list)
     
