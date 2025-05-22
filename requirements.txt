@@ -1,0 +1,18 @@
+jax==0.4.25
+scipy==1.12.0
+scikit-image==0.22.0
+flax==0.8.3
+chex==0.1.86
+dm-haiku==0.0.11
+six==1.16.0
+statsmodels==0.14.1
+pyinstrument==4.6.2
+matplotlib==3.8.4
+pytest==7.4.4
+wandb
+nvidia-cudnn-cu12==8.9.7.29 
+mujoco==3.2.3
+mujoco-mjx==3.2.3
+stack-data==0.6.3
+brax==0.10.5
+jaxlib==0.4.25+cuda12.cudnn89 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html 

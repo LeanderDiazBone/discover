@@ -7,7 +7,7 @@ The implementation of the core off-policy RL algorithms and evaluatioon environm
 
 ### Installation
 
-Requires Python 3.11.
+Requires Python 3.10.
 
 ```
 python -m venv venv
