@@ -5,15 +5,31 @@ The implementation of the core off-policy RL algorithms and evaluation environme
 
 ## Getting started
 
-### Installation
+## Installation 📂
 
-Requires Python 3.10.
+#### Editable Install (Recommended)
 
+After cloning the repository, run one of the following commands.
+
+With GPU on Linux:
+```bash
+pip install -e . -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 ```
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
+
+> [!NOTE]  
+> Make sure you have the correct CUDA version installed, i.e. CUDA >= 12.3.
+> You can check your CUDA version with `nvcc --version` command.
+> If you have an older version, you can create a new conda environment with the correct version of CUDA and JaxGCRL package using the following command:
+> ```bash
+> conda env create -f environment.yml
+> ```
+
+With CPU on Mac:
+```bash
+export SDKROOT="$(xcrun --show-sdk-path)" # may be needed to build brax dependencies
+pip install -e . 
 ```
+
 
 ### Documentation
 
