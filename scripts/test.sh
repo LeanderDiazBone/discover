@@ -1,3 +1,4 @@
+#!/bin/sh
 POINT_MAZE_SIMPLE="--env_name=high_dimensional_maze --env_file_name=../maze_layouts/rand_2d_10h.pkl --num_timesteps=100000 --episode_length=100 --num_envs=1 --train_step_multiplier=1 --num_goals=100 --unroll_length=100 --batch_size=1"
 
 DISCOVER="--algo=TD3 --goal_selection_strategy=UCB --ucb_std_tar=0.0 --ucb_std_ini=1.0 --ucb_mean_tar=1.0 --ucb_mean_ini=0.0 --filter_goals=none --relabel_prob_future=0.7"
