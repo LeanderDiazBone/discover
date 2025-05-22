@@ -348,7 +348,7 @@ class MetricsRecorder:
         for key in self.metrics_to_collect:
             self.ensure_metric(metrics, key)
         
-        if do_render and "euler" in self.exp_dir:
+        if do_render:
             self.count += 1
             if self.render_delay == self.count:
                 render(make_policy, params, env, self.exp_dir, self.exp_name, num_steps)
