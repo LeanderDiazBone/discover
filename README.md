@@ -34,3 +34,17 @@ Please refer to the JaxGCRL repository (https://github.com/MichalBortkiewicz/Jax
 ### Reproducing the experiments
 
 The `scripts` directory contains the `train.sh` script, which can be used to run the main experiments from the paper.
+
+## Citation
+
+```bibtex
+@misc{diazbone2025discoverautomatedcurriculasparsereward,
+      title={DISCOVER: Automated Curricula for Sparse-Reward Reinforcement Learning}, 
+      author={Leander Diaz-Bone and Marco Bagatella and Jonas Hübotter and Andreas Krause},
+      year={2025},
+      eprint={2505.19850},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2505.19850}, 
+}
+```
